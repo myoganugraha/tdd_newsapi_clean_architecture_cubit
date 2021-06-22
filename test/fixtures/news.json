@@ -1,13 +1,13 @@
 {
     "source": {
-        "id": "1",
-        "name": "Sindonews.com"
+        "id": "id",
+        "name": "name"
     },
-    "author": "Intan Rakhmayanti Dewi",
-    "title": "Pindahkan Megaroket SLS, NASA Siap Meluncur ke Bulan - SINDOnews Sains",
-    "description": "NASA selangkah lebih dekat dengan bulan, lewat misi Artemis yang memang dirancang fokus pada eksplorasi ke bulan. NASA selangkah lebih dekat dengan bulan, lewat...",
-    "url": "https://sains.sindonews.com/read/463530/767/pindahkan-megaroket-sls-nasa-siap-meluncur-ke-bulan-1624370797",
-    "urlToImage": "https://pict.sindonews.net/dyn/620/pena/news/2021/06/22/767/463530/pindahkan-megaroket-sls-nasa-siap-meluncur-ke-bulan-hav.jpg",
-    "publishedAt": "2021-06-22T15:07:08Z",
-    "content": "NEW YORK - NASA selangkah lebih dekat dengan bulan, lewat misi Artemis yang memang dirancang fokus pada eksplorasi ke bulan.Badan antariksa AS itu telah selesai merakit megaroket Space Launch System … [+1163 chars]"
+    "author": "author",
+    "title": "title",
+    "description": "description",
+    "url": "url",
+    "urlToImage": "urlToImage",
+    "publishedAt": "publishedAt",
+    "content": "content"
 }

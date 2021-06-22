@@ -29,7 +29,7 @@ void main() {
         // act
         final result = SourceModel.fromJson(json);
         // assert
-        expect(result, tSourceModel);
+        expect(result, equals(tSourceModel));
       },
     );
   });
