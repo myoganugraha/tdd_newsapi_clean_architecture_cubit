@@ -26,6 +26,7 @@ void main() {
         url: 'url1',
         urlToImage: 'urlToImage1',
         content: 'content1',
+        publishedAt:'publishedAt1',
         source: SourceEntity(id: 'id1', name: 'name1')),
     NewsEntity(
         author: 'author2',
@@ -34,6 +35,7 @@ void main() {
         url: 'url2',
         urlToImage: 'urlToImage2',
         content: 'content2',
+        publishedAt:'publishedAt2',
         source: SourceEntity(id: 'id2', name: 'name2')),
     NewsEntity(
         author: 'author3',
@@ -42,6 +44,7 @@ void main() {
         url: 'url3',
         urlToImage: 'urlToImage3',
         content: 'content3',
+        publishedAt:'publishedAt3',
         source: SourceEntity(id: 'id3', name: 'name3'))
   ];
 

@@ -10,6 +10,7 @@ class NewsModel extends NewsEntity {
       required String url,
       required String urlToImage,
       required String content,
+      required String publishedAt,
       required SourceModel source})
       : super(
             author: author,
@@ -18,6 +19,7 @@ class NewsModel extends NewsEntity {
             url: url,
             urlToImage: urlToImage,
             content: content,
+            publishedAt: publishedAt,
             source: source);
 
   factory NewsModel.fromJson(Map<String, dynamic> json) {
@@ -27,6 +29,7 @@ class NewsModel extends NewsEntity {
         description: json['description'],
         url: json['url'],
         urlToImage: json['urlToImage'],
+        publishedAt: json['publishedAt'],
         content: json['content'],
         source: SourceModel.fromJson(json['source']));
   }
@@ -38,7 +41,8 @@ class NewsModel extends NewsEntity {
       'url': url,
       'urlToImage': urlToImage,
       'content': content,
-      'source': source
+      'source': source,
+      'publishedAt': publishedAt
     };
   }
 }
