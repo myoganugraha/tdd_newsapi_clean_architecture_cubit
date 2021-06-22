@@ -1,14 +1,16 @@
 import 'package:dartz/dartz.dart';
 import 'package:newsapi_clean_architecture/core/error/failures.dart';
-import 'package:newsapi_clean_architecture/features/data/models/news_model.dart';
+import 'package:newsapi_clean_architecture/core/usecases/usecase.dart';
+import 'package:newsapi_clean_architecture/features/domain/entities/news_entity.dart';
 import 'package:newsapi_clean_architecture/features/domain/repositories/news_repository.dart';
 
-class GetNewsList {
+class GetNewsList implements UseCase<List<NewsEntity>, NoParams> {
   final NewsRepository newsRepository;
 
   GetNewsList(this.newsRepository);
 
-  Future<Either<Failure, List<NewsModel>>> call() async {
+  @override
+  Future<Either<Failure, List<NewsEntity>>> call(NoParams params) async {
     return newsRepository.getNewsList();
   }
 }
