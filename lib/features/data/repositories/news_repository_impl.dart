@@ -1,3 +1,4 @@
+import 'package:newsapi_clean_architecture/core/error/exceptions.dart';
 import 'package:newsapi_clean_architecture/core/network/network_info.dart';
 import 'package:newsapi_clean_architecture/features/data/datasources/news_local_data_source.dart';
 import 'package:newsapi_clean_architecture/features/data/datasources/news_remote_data_source.dart';
@@ -17,8 +18,21 @@ class NewsRepositoryImpl extends NewsRepository {
       required this.networkInfo});
 
   @override
-  Future<Either<Failure, List<NewsEntity>>> getNewsList() {
-    // TODO: implement getNewsList
-    throw UnimplementedError();
+  Future<Either<Failure, List<NewsEntity>>> getNewsList() async {
+    if (await networkInfo.isConnected) {
+      try {
+        final remoteNewsList = await remoteDataSource.getNewsList();
+        localDataSource.cacheNewsList(remoteNewsList);
+        return Right(remoteNewsList);
+      } on ServerException {
+        return Left(ServerFailure());
+      }
+    } else {
+      try {
+        return Right(await localDataSource.getNewsListFromLocal());
+      } on CacheException {
+        return Left(CacheFailure());
+      }
+    }
   }
 }
